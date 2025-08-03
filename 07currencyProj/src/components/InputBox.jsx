@@ -1,15 +1,15 @@
 import React from 'react'
 
 function InputBox({
-    label,
+    label,          // to and from label
     amount,
-    onAmountChange,
-    onCurrencyChange,
-    currencyOptions = [],
-    selectedCurrency = "usd",
-    amountDisabled = false,
-    currencyDisabled = false,
-    className = "",
+    onAmountChange,             // methods that change the output when the amount is changed (takes help of useState in App.jsx)
+    onCurrencyChange,           // methods that change the output when the currency is changed (takes help of useState in App.jsx)
+    currencyOptions = [],       // fetch all the currency options from the api here
+    selectedCurrency = "usd",   // selected currency ; default : usd
+    amountDisabled = false,     // feature which disables user to enter amount (like the final converted amount cannot be changed)
+    currencyDisabled = false,   // feature which disables user to set currency 
+    className = "", // allowing user to give custom class
 }) {
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
