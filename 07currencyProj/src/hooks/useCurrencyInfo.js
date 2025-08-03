@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+// currency is the string code like "usd"
 function useCurrencyInfo(currency){
     const [data,setData] = useState({});
 
@@ -9,7 +10,7 @@ function useCurrencyInfo(currency){
         .then((res) => setData(res[currency]))
     }, [currency])
 
-    return data; // all the converted currencies
+    return data; // all the converted currencies equivalent to 1 of the given currency
 }
 
 export default useCurrencyInfo; 

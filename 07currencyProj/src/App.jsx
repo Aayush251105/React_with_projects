@@ -8,15 +8,17 @@ function App() {
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
   const [convertedAmount, setConvertedAmount] = useState(0);
+  
   // custom hook
-
   const currencyinfo = useCurrencyInfo(from);
   const options = Object.keys(currencyinfo);
 
+  // converts to equivalent amount in other currency
   const convert = () => {
     setConvertedAmount(amount * currencyinfo[to]);
   };
 
+  // swap button fn - swaps the amount and converted amount, to and from
   const swap = () => {
     setFrom(to);
     setTo(from);
