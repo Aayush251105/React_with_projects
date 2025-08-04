@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* IMP : this is the new way to enable light and dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
